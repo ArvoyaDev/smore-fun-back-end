@@ -2,7 +2,6 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-const Note = require('./models/notes');
 const {readNotes, postNotes, putNotes, deleteNotes} = require('./handlers');
 const cityInfoRouter = require('./lib/router');
 
