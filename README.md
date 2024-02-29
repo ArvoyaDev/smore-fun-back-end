@@ -1,5 +1,7 @@
 # S'more Fun
 
+Trello - [Link](https://trello.com/b/CccNlgrL/smore-fun)
+
 ## Summary
 
 S'more Fun is a user-friendly web application designed to simplify outdoor adventure planning for beginner campers and hikers. By providing essential information, resources, and community support in one convenient platform, S'more Fun aims to demystify the camping and hiking experience, making nature more accessible and less daunting for novices. The app encourages users to explore state parks, trails, and campsites, offering tools to plan their trips confidently and safely. They can log their experiences by making a profile, and can read and write their own testimonials.
