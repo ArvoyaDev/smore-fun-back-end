@@ -158,6 +158,8 @@ typings/
 # .idea/*.iml
 # .idea/modules
 
+.idea/copilot
+
 # CMake
 cmake-build-*/
 

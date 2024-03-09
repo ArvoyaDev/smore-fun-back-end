@@ -10,6 +10,8 @@ const app = express();
 app.use(cors());
 
 app.use(express.json());
+
+// * Routes to all other APIs
 app.use('/api', cityInfoRouter);
 
 const PORT = process.env.PORT;
