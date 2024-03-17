@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const verifyUser = require('./models/authorize');
 const {readNotes, postNotes, putNotes, deleteNotes} = require('./handlers');
 const cityInfoRouter = require('./lib/router');
+const {verify} = require("jsonwebtoken");
 
 const app = express();
 
@@ -23,14 +24,13 @@ db.on('error', console.error.bind(console, 'connection error'));
 db.once('open', () => console.log('Mongoose is connected'));
 
 app.get('/', (req, res) => res.status(200).send('Default Route Working'));
-app.use(verifyUser);
 // * Routes to all other APIs
 app.use('/api', cityInfoRouter);
 // * Notebook CRUD
-app.get('/notes', readNotes);
-app.post('/notes', postNotes);
-app.delete('/notes/:id', deleteNotes);
-app.put('/notes/:id', putNotes);
+app.get('/notes', verifyUser, readNotes);
+app.post('/notes', verifyUser, postNotes);
+app.delete('/notes/:id', verifyUser, deleteNotes);
+app.put('/notes/:id', verifyUser, putNotes);
 
 
 app.get('*', (req, res) => res.status(400).send('Resource Not Found'));
